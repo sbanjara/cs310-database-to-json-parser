@@ -37,7 +37,6 @@ public class DatabaseTest {
             String server = ("jdbc:mysql://localhost/p2_test");
             String username = "root";
             String password = "CS310";
-            //System.out.println("Connecting to " + server + "...");
             
             /* Load the MySQL JDBC Driver */
             
@@ -76,7 +75,7 @@ public class DatabaseTest {
                             key.add(metadata.getColumnLabel(i));
                         }
                         
-                        /* Get Data; Print as Table Rows */
+                        /* Get Data; Put the data in JSONObject */
                         
                         while(resultset.next()) {
                             
@@ -127,8 +126,6 @@ public class DatabaseTest {
                 
             }
             
-            System.out.println();
-            
             /* Close Database Connection */
             
             conn.close();
@@ -155,6 +152,4 @@ public class DatabaseTest {
             
     }
         
-}
-    
-    
+}   
